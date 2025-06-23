@@ -13,7 +13,7 @@ jobs:
           distribution: 'temurin'
           java-version: 17
           cache: 'gradle'
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/wrapper-validation-action@v3
 
       - name: Check
         run: ./gradlew check
@@ -38,7 +38,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           submodules: true
-      - uses: gradle/wrapper-validation-action@v1
+      - uses: gradle/wrapper-validation-action@v3
 
       - name: Cache APKs and gradle dependencies
         uses: actions/cache@v2
